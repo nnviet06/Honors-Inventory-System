@@ -1,0 +1,85 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #1a2e2e 0%, #006747 50%, #005432 100%);
+    border-radius: 12px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+}
+
+.searchInput {
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #CFC493;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.searchInput::placeholder {
+    color: #CAD2D8;
+}
+
+.searchButton {
+    background-color: #CFC493; 
+    color: #006747; 
+    border: 2px solid #CFC493;
+    padding: 14px 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+    background-color: #006747;
+    color: #CFC493;
+    border-color: #CFC493;
+}
+
+.filterContainer {
+    position: relative;
+}
+
+.filterButton {
+    background-color: #CFC493; 
+    color: #006747; 
+    border: 2px solid #CFC493;
+    padding: 14px 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+    background-color: #006747;
+    color: #CFC493;
+    border-color: #CFC493;
+}
+
+.filterDropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    min-width: 200px;
+    background: linear-gradient(135deg, #1a2e2e 0%, #006747 50%, #005432 100%);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.filterDropdown p {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 14px;
+}

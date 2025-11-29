@@ -3,10 +3,18 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
-    border-radius: 12px; 
-    margin: 20px 40px; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    padding: 40px 60px;
+    border-radius: 16px;
+    margin: 20px 40px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+nav h1 {
+    color: #CFC493;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .title {
