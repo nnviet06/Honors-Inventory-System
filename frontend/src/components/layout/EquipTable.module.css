@@ -1,0 +1,134 @@
+/* Table Container - Centered, MUCH Wider (almost full screen) */
+.tableContainer {
+  max-width: 95%;
+  margin: 40px auto;
+  padding: 0 80px;
+}
+
+/* Table Box - Green gradient background, MUCH Larger */
+.table {
+  background: linear-gradient(135deg, #1a2e2e 0%, #006747 50%, #005432 100%);
+  border-radius: 20px;
+  padding: 70px 80px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+/* Table Element */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Header - White text, Much Larger */
+th {
+  color: #FFFFFF;
+  text-align: left;
+  padding: 28px 24px;
+  border-bottom: 4px solid #FFFFFF;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+/* Table Data - White text, Much Larger */
+td {
+  color: #FFFFFF;
+  padding: 24px 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 24px;
+}
+
+/* Row Hover Effect */
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Last row - no bottom border */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Action Buttons Container */
+.actionButtons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Edit Button - USF Green, Much Larger */
+.editButton {
+  background-color: #006747;
+  color: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.editButton:hover {
+  background-color: #005432;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.editButton:active {
+  transform: translateY(0);
+}
+
+/* Delete Button - Red, Much Larger */
+.deleteButton {
+  background-color: #dc3545;
+  color: #FFFFFF;
+  border: 3px solid #dc3545;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.deleteButton:active {
+  transform: translateY(0);
+}
+
+/* Loading Text - Much Larger */
+.loadingText {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* Error Text - Much Larger */
+.errorText {
+  color: #dc3545;
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Empty State Text - Much Larger */
+.emptyText {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 26px;
+  font-style: italic;
+}
