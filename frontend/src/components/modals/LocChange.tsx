@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import './LocChange.module.css';
+import styles from './LocChange.module.css';
 
 const LocChange = () => {
     const [location, setLocation] = useState<string>('');

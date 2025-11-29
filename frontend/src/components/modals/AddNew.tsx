@@ -1,5 +1,5 @@
 import {useState, useEffect } from 'react';
-import './AddNew.module.css';
+import styles from './AddNew.module.css';
 
 const AddNew = () => {
     const [name, setName] = useState<string>('');

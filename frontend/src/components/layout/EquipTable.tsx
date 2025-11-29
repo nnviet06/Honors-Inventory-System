@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import './EquipTable.module.css';
+import styles from './EquipTable.module.css';
 
 const EquipTable = () => {
     const [items, setItems] = useState<Array<{id: number; name: string;}>>([]);
