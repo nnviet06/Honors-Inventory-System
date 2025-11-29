@@ -1,22 +1,30 @@
-import { useState, useEffect } from 'react';
+import {useState} from 'react';
 
-const App = () => {
-  const [count, setCount] = useState(0);
+type User = {
+    name: string;
+    age: number;
+}
 
-  // useEffect - Chạy SAU KHI component render
-  useEffect(() => {
-    console.log('Component đã render!');
-    console.log('Count hiện tại:', count);
-  }, [count]);  // ← Chạy lại MỖI KHI count thay đổi
+const Test = () => {
+    const [user, setUser] = useState<User>({name: 'Initial Name', age: 0});
+    const [age, setAge] = useState<number>(0);
 
-  return (
-    <div>
-      <h1>Count: {count}</h1>
-      <button onClick={() => setCount(count + 1)}>
-        Increase
-      </button>
-    </div>
-  );
-};
+    const changeName = () => {
+        setUser({...user, name: 'Change Name'});
+    };
 
-export default App;
+    const changeAge = () => {
+        setAge(age + 1);
+    };
+
+    return (
+        <div>
+            <p> User information</p>
+            <p> Name: {user.name}  Age: {age} </p>
+            <button onClick={changeName}> Change Name </button>
+            <button onClick={changeAge}> Increase Age </button>
+        </div>
+    );
+}
+
+export default Test;
