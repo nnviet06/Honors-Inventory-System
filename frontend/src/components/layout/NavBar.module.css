@@ -1,5 +1,5 @@
 nav {
-    background-color: #006747; 
+    background: linear-gradient(135deg, #1a2e2e 0%, #006747 50%, #005432 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
