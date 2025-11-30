@@ -1,18 +1,25 @@
 import {useState} from 'react';
 import styles from './SearchBar.module.css';
+import AddNew from '../modals/AddNew';
 
 const SearchBar = () => {    
     // Three main components: Search button, Filter button, and Add New button
     const [query, setQuery] = useState<string>('');
     const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
+    const [showAddNewModal, setShowAddNewModal] = useState<boolean>(false);
 
     const toggleFilter = () => setIsFilterOpen(!isFilterOpen);
 
     const handleAddNew = () => {
-        console.log("New Equipment Added!");
+        setShowAddNewModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowAddNewModal(false);  
     };
 
     return (
+        <>
         <div className={styles.searchBar}>  
             <input
                 className={styles.searchInput}
@@ -37,6 +44,11 @@ const SearchBar = () => {
                 + Add New 
             </button>
         </div>
+        {showAddNewModal && (
+            <AddNew onClose={handleCloseModal} />
+        )}
+        </>
+        
     );
     
 }

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import styles from './App.module.css'
-import Test from '../Test'
 import NavBar from './components/layout/NavBar'
 import SearchBar from './components/layout/SearchBar'
 import EquipTable from './components/layout/EquipTable'
