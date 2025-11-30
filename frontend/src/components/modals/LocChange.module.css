@@ -1,0 +1,157 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #006747;
+    padding-bottom: 10px;
+}
+
+.modalHeader h2 {
+    color: #006747;
+    font-size: 24px;
+    margin: 0;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.closeButton:hover {
+    color: #006747;
+}
+
+.errorMessage {
+    background-color: #fee;
+    color: #c33;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c33;
+}
+
+.equipmentInfo {
+    background: linear-gradient(135deg, #f0f8f5, #e8f4ef);
+    border-left: 4px solid #006747;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+}
+
+.equipmentInfo p {
+    margin: 8px 0;
+    color: #005432;
+    font-size: 14px;
+}
+
+.equipmentInfo strong {
+    color: #006747;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    color: #005432;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.formGroup select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.formGroup select:focus {
+    outline: none;
+    border-color: #006747;
+}
+
+.formGroup select:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.cancelButton,
+.saveButton {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancelButton {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.cancelButton:hover:not(:disabled) {
+    background-color: #d0d0d0;
+}
+
+.saveButton {
+    background: linear-gradient(135deg, #006747, #005432);
+    color: white;
+}
+
+.saveButton:hover:not(:disabled) {
+    background: linear-gradient(135deg, #005432, #003d24);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 103, 71, 0.3);
+}
+
+.cancelButton:disabled,
+.saveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

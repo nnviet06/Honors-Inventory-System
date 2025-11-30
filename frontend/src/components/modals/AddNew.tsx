@@ -1,15 +1,132 @@
-import {useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './AddNew.module.css';
 
-const AddNew = () => {
-    const [name, setName] = useState<string>('');
-    const [age, setAge] = useState<number>(0);      
-    return (
-        <div>
-            <p> Add New Modal </p>  
-            <p> Name: {name}  Age: {age} </p>
-        </div>
-    );
+interface AddNewProps {
+    onClose: () => void;
 }
 
-export default AddNew
+interface Location {
+    id: number;
+    room_name: string;
+    building_type: string;
+}
+
+const AddNew = ({ onClose }: AddNewProps) => {
+    const [model, setModel] = useState('');
+    const [equipmentType, setEquipmentType] = useState('');
+    const [locationId, setLocationId] = useState(0);
+    const [locations, setLocations] = useState<Location[]>([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        fetch('http://localhost:5000/api/locations')
+            .then(res => res.json())
+            .then(data => setLocations(data))
+            .catch(() => setError('Failed to load locations'));
+    }, []);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        
+        if (!model.trim() || !equipmentType.trim() || locationId === 0) {
+            setError('All fields are required');
+            return;
+        }
+
+        try {
+            setLoading(true);
+            setError('');
+            
+            const response = await fetch('http://localhost:5000/api/equipment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    model: model.trim(),
+                    equipment_type: equipmentType.trim(),
+                    location_id: locationId,
+                }),
+            });
+
+            if (!response.ok) throw new Error('Failed to add equipment');
+            onClose();
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Failed to add equipment');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className={styles.modalBackdrop} onClick={onClose}>
+            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.modalHeader}>
+                    <h2>Add New Equipment</h2>
+                    <button className={styles.closeButton} onClick={onClose}>×</button>
+                </div>
+
+                {error && <div className={styles.errorMessage}>{error}</div>}
+
+                <form onSubmit={handleSubmit}>
+                    <div className={styles.formGroup}>
+                        <label>Model Name:</label>
+                        <input
+                            type="text"
+                            value={model}
+                            onChange={(e) => setModel(e.target.value)}
+                            placeholder="e.g., Dell P2419H"
+                            disabled={loading}
+                        />
+                    </div>
+
+                    <div className={styles.formGroup}>
+                        <label>Equipment Type:</label>
+                        <input
+                            type="text"
+                            value={equipmentType}
+                            onChange={(e) => setEquipmentType(e.target.value)}
+                            placeholder="e.g., monitor, laptop, printer"
+                            disabled={loading}
+                        />
+                    </div>
+
+                    <div className={styles.formGroup}>
+                        <label>Location:</label>
+                        <select
+                            value={locationId}
+                            onChange={(e) => setLocationId(Number(e.target.value))}
+                            disabled={loading}
+                        >
+                            <option value={0}>Select a location</option>
+                            {locations.map((loc) => (
+                                <option key={loc.id} value={loc.id}>
+                                    {loc.room_name} ({loc.building_type})
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div className={styles.modalActions}>
+                        <button
+                            type="button"
+                            className={styles.cancelButton}
+                            onClick={onClose}
+                            disabled={loading}
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            type="submit"
+                            className={styles.saveButton}
+                            disabled={loading}
+                        >
+                            {loading ? 'Adding...' : 'Add Equipment'}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+};
+
+export default AddNew;
