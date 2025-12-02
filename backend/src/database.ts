@@ -85,5 +85,3 @@ export const updateEquipmentLocation = (id: number, location_id: number) => {
 export const deleteEquipment = (id: number) => {
     return db.prepare('DELETE FROM equipment WHERE id = ?').run(id);
 };
-
-export default db;
