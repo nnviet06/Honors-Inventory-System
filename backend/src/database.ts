@@ -13,22 +13,20 @@ const initDB = () => {
         const schema = readFileSync(schemaPath, 'utf-8');
         db.exec(schema);
         
-        // Check if data already exists
         const count = db.prepare('SELECT COUNT(*) as count FROM locations').get() as { count: number };
         
         if (count.count === 0) {
             const sampleData = readFileSync(samplePath, 'utf-8');
             db.exec(sampleData);
-            console.log('✅ Database initialized with sample data');
+            console.log('Database initialized with sample data');
         }
     } catch (error) {
-        console.error('❌ Database initialization error:', error);
+        console.error('Database initialization error:', error);
     }
 };
 
 initDB();
 
-// Equipment with location info (JOIN query)
 export const getAllEquipment = () => {
     const query = `
         SELECT 
