@@ -1,8 +1,14 @@
 import Database from 'better-sqlite3';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import dotenv from 'dotenv';
 
-const db = new Database('inventory.db');
+dotenv.config();
+
+const dbName = process.env.DB_MODE === 'test' ? 'inventory.test.db' : 'inventory.db';
+const db = new Database(dbName);
+
+console.log(`Using database: ${dbName}`);  //Reminder for myself
 
 // Initialize database
 const initDB = () => {
@@ -18,7 +24,7 @@ const initDB = () => {
         if (count.count === 0) {
             const sampleData = readFileSync(samplePath, 'utf-8');
             db.exec(sampleData);
-            console.log('Initialized sample');
+            console.log(`Initialized sample (${dbName})`);
         }
     } catch (error) {
         console.error('Database error:', error);
