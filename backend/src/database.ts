@@ -1,11 +1,8 @@
 import Database from 'better-sqlite3';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import dotenv from 'dotenv';
 
-dotenv.config();
-
-const dbName = process.env.DB_MODE === 'test' ? 'inventory.test.db' : 'inventory.db';
+const dbName = 'inventory.db'; //Keeping og database
 const db = new Database(dbName);
 
 console.log(`Using database: ${dbName}`);  //Reminder for myself
