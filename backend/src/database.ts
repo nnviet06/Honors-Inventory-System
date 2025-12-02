@@ -18,10 +18,10 @@ const initDB = () => {
         if (count.count === 0) {
             const sampleData = readFileSync(samplePath, 'utf-8');
             db.exec(sampleData);
-            console.log('Database initialized with sample data');
+            console.log('Initialized sample');
         }
     } catch (error) {
-        console.error('Database initialization error:', error);
+        console.error('Database error:', error);
     }
 };
 

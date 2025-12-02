@@ -22,7 +22,7 @@ export const getEquipmentById = (req: Request, res: Response) => {
         
         res.json(equipment);
     } catch (error) {
-        res.status(500).json({ error: 'Failed to fetch equipment' });
+        res.status(500).json({ error: 'Failed to fetch' });
     }
 };
 
