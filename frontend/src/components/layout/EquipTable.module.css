@@ -1,6 +1,6 @@
 .tableContainer {
-  max-width: none;
-  margin: 20px 40px;
+  max-width: 2000px;
+  margin: 20px auto;
   padding: 0;
 }
 
@@ -33,7 +33,7 @@ td {
   padding: 24px 15px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   font-size: 32px;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 th:first-child,
@@ -44,6 +44,7 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 30px; 
+  white-space: nowrap;
 }
 
 tr:hover {
