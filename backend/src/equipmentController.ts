@@ -47,12 +47,12 @@ export const createEquipment = (req: Request, res: Response) => {
         
         const result = db.createEquipment(model, equipment_type, location_id);
         res.status(201).json({ id: result.lastInsertRowid, message: 'Equipment created' });
-    } catch (error) {
-        res.status(500).json({ error: 'Failed to create equipment' });
-    }
+        } catch (error) {
+            res.status(500).json({ error: 'Failed to create equipment' });
+        }
 };
 
-// Put update equipment location
+// Update equipment location
 export const updateEquipmentLocation = (req: Request, res: Response) => {
     try {
         const id = parseInt(req.params.id);

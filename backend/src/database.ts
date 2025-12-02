@@ -5,7 +5,7 @@ import { join } from 'path';
 const dbName = 'inventory.db'; //Keeping og database
 const db = new Database(dbName);
 
-console.log(`Using database: ${dbName}`);  //Reminder for myself
+console.log(`Using database: ${dbName}`);  //Only using one database. No more testing db.
 
 // Initialize database
 const initDB = () => {
