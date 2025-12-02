@@ -45,7 +45,7 @@ const SearchBar = () => {
             </button>
         </div>
         {showAddNewModal && (
-            <AddNew onClose={handleCloseModal} />
+            <AddNew onClose={handleCloseModal} /> 
         )}
         </>
         
