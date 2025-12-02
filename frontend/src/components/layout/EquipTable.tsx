@@ -11,7 +11,7 @@ interface Equipment {
   building_type: string;
 }
 
-const EquipTable = () => {
+const EquipTable = ({ refreshKey }: EquipTableProps) => {
   const [equipmentList, setEquipmentList] = useState<Equipment[]>([]);
   const [selectedItem, setSelectedItem] = useState<Equipment | null>(null);
   const [showLocChangeModal, setShowLocChangeModal] = useState(false);
@@ -20,46 +20,7 @@ const EquipTable = () => {
 
   useEffect(() => {
     fetchEquipment();
-  }, []);
-
-//   useEffect(() => {
-//   // Fake loading
-//   setLoading(true);
-  
-//   // Mock data
-//   const mockData: Equipment[] = [
-//     {
-//       id: 1,
-//       model: "Dell Elite8",
-//       equipment_type: "Laptop",
-//       location_id: 1,
-//       room_name: "HON 4015B",
-//       building_type: "Office"
-//     },
-//     {
-//       id: 2,
-//       model: "HP LaserJet",
-//       equipment_type: "Printer",
-//       location_id: 2,
-//       room_name: "HON 3017",
-//       building_type: "Classroom"
-//     },
-//     {
-//       id: 3,
-//       model: "Dell Monitor 27\"",
-//       equipment_type: "Monitor",
-//       location_id: 3,
-//       room_name: "HON Warehouse",
-//       building_type: "Warehouse"
-//     }
-//   ];
-  
-//   // Simulate API delay
-//   setTimeout(() => {
-//     setEquipmentList(mockData);
-//     setLoading(false);
-//   }, 500);
-// }, []);
+  }, [refreshKey]);
 
   const fetchEquipment = async () => {
     try {

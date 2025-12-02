@@ -2,7 +2,7 @@ import {useState} from 'react';
 import styles from './SearchBar.module.css';
 import AddNew from '../modals/AddNew';
 
-const SearchBar = () => {    
+const SearchBar = ({ onRefresh }: { onRefresh: () => void }) => {    
     // Three main components: Search button, Filter button, and Add New button
     const [query, setQuery] = useState<string>('');
     const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
@@ -45,7 +45,7 @@ const SearchBar = () => {
             </button>
         </div>
         {showAddNewModal && (
-            <AddNew onClose={handleCloseModal} /> 
+            <AddNew onClose={handleCloseModal} onSuccess={onRefresh} /> 
         )}
         </>
         

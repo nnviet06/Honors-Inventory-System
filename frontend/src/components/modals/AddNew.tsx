@@ -3,6 +3,7 @@ import styles from './AddNew.module.css';
 
 interface AddNewProps {
     onClose: () => void;
+    onSuccess: () => void;
 }
 
 interface Location {
@@ -11,7 +12,7 @@ interface Location {
     building_type: string;
 }
 
-const AddNew = ({ onClose }: AddNewProps) => {
+const AddNew = ({ onClose, onSuccess }: AddNewProps) => {
     const [model, setModel] = useState('');
     const [equipmentType, setEquipmentType] = useState('');
     const [locationId, setLocationId] = useState(0);
@@ -49,6 +50,7 @@ const AddNew = ({ onClose }: AddNewProps) => {
             });
 
             if (!response.ok) throw new Error('Failed to add equipment');
+            onSuccess();
             onClose();
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Failed to add equipment');

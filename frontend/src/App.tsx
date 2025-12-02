@@ -7,12 +7,18 @@ import AddNew from './components/modals/AddNew'
 import LocChange from './components/modals/LocChange'
 
 function App() {
+    const [refreshKey, setRefreshKey] = useState(0);  
+
+    const handleRefresh = () => {  
+        setRefreshKey(prev => prev + 1);
+    };
+
     return (
         <div className={styles.app}>
             <NavBar />  
-            <SearchBar />  
+            <SearchBar onRefresh={handleRefresh} />  
             <div className={styles.container}>
-                <EquipTable /> 
+                <EquipTable  refreshKey={refreshKey} /> 
             </div>
         </div>
     );
