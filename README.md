@@ -1,6 +1,6 @@
 # 📦 Honors Inventory System
 
-A full-stack equipment inventory management system built for the USF Honors College IT Team. This application allows staff to track, manage, and transfer IT equipment across different locations within the Honors building. 
+A full-stack equipment inventory management system. This application allows staff to track, manage, and transfer IT equipment across different locations within the Honors building. 
 
 ## Project Overview
 
@@ -9,9 +9,6 @@ This inventory system enables the Honors IT Team to:
 - **MANAGE LOCATIONS** across 5 floors (Warehouses, Classrooms, Offices)
 - **ADD NEW** to inventory
 - **DELETE** broken equipment
-
-Built as part of the Honors IT Team Coding Challenge. 
-
 ---
 
 ## Technology Stack
@@ -38,25 +35,12 @@ cd backend
 npm install
 ```
 
-**Installed packages:**
-- express, cors, dotenv
-- better-sqlite3
-- typescript, ts-node, nodemon
-- @types/express, @types/cors, @types/node
-
 ### 3. Install Frontend Dependencies
 
 ```bash
 cd ../frontend
 npm install
 ```
-
-**Installed packages:**
-- react, react-dom
-- vite
-- typescript
-- @vitejs/plugin-react
-
 ---
 
 ## How to Run
@@ -91,8 +75,7 @@ The database is **automatically initialized** when you first run the backend!
 - ✅ **Loading States** - Visual feedback during API calls
 - ✅ **Error Handling** - User-friendly error messages
 - ✅ **Auto-refresh** - Table updates after add/edit/delete
-- ✅ **USF Theme** - Green & Gold color scheme
-- ✅ **Responsive Design** - Works on different screen sizes
+- ✅ **USF Theme** 
 
 ### Future Work (UI Present, Logic Not Implemented)
 - 🔄 **Search Button** - SearchBar component exists but search logic not implemented
