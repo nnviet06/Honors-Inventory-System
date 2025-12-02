@@ -1,8 +1,8 @@
 # 📦 Honors Inventory System
 
-A full-stack equipment inventory management system built for the USF Honors College IT Team. This application allows staff to track, manage, and transfer IT equipment across different locations within the Honors building.
+A full-stack equipment inventory management system built for the USF Honors College IT Team. This application allows staff to track, manage, and transfer IT equipment across different locations within the Honors building. 
 
-## 🎯 Project Overview
+## Project Overview
 
 This inventory system enables the Honors IT Team to:
 - **TRACK** (monitors, laptops, printers, keyboards, mice)
@@ -10,11 +10,11 @@ This inventory system enables the Honors IT Team to:
 - **ADD NEW** to inventory
 - **DELETE** broken equipment
 
-Built as part of the Honors IT Team Coding Challenge.
+Built as part of the Honors IT Team Coding Challenge. 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend: React + Vite + TypeScript + CSS Modules
 
@@ -22,7 +22,7 @@ Built as part of the Honors IT Team Coding Challenge.
 
 ### Database: SQLite
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone the Repository
 
@@ -59,7 +59,7 @@ npm install
 
 ---
 
-## 🏃 How to Run
+## How to Run
 
 You need **TWO separate terminal windows** running simultaneously.
 
@@ -70,18 +70,18 @@ cd backend
 npm run dev
 ```
 
-### Terminal 1: Start Backend Server
+### Terminal 2: Start Frontend Server
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-## 🗄️ Database Setup
+## Database Setup
 
 The database is **automatically initialized** when you first run the backend!
 
-## ✨ Features
+## Features
 
 ### Completed Features
 - ✅ **View Equipment** - Display all equipment in a table
@@ -99,14 +99,11 @@ The database is **automatically initialized** when you first run the backend!
 - 🔄 **Filter Button** - Filter dropdown UI exists but filtering logic not implemented
 - 🔄 **"By Location" View** - Navigation button exists but view not implemented
 
-> **Note:** The SearchBar with Search/Filter buttons and "By Location" button are visible in the UI as placeholder components. These represent planned features for future development but do not currently have functional implementations.
+## Acknowledgments
 
+- CSS and database are AI powered to save time.
 
+> **Note:** The current project only fulfills the requirements of the coding challenge. For scalability, I have added a View By Location button, a Search Bar, and Filter button for future development. These functions have not yet been implemented.
 
-All components feature:
-- Rounded corners (8-20px border-radius)
-- Box shadows for depth
-- Smooth transitions (0.3s ease)
-- Consistent spacing system
 
 
