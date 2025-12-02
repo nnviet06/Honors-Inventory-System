@@ -59,7 +59,7 @@ export const updateEquipmentLocation = (req: Request, res: Response) => {
         const { location_id } = req.body;
         
         if (!location_id) {
-            return res.status(400).json({ error: 'Missing location_id' });
+            return res.status(400).json({ error: 'Missing location id' });
         }
         
         const result = db.updateEquipmentLocation(id, location_id);
