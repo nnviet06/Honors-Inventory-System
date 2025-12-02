@@ -3,8 +3,8 @@ import styles from './App.module.css'
 import NavBar from './components/layout/NavBar'
 import SearchBar from './components/layout/SearchBar'
 import EquipTable from './components/layout/EquipTable'
-import AddNew from './components/modals/AddNew'
-import LocChange from './components/modals/LocChange'
+//import AddNew from './components/modals/AddNew'
+//import LocChange from './components/modals/LocChange'
 
 function App() {
     const [refreshKey, setRefreshKey] = useState(0);  
