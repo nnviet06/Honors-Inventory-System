@@ -8,7 +8,7 @@ This inventory system enables the Honors IT Team to:
 - **TRACK** (monitors, laptops, printers, keyboards, mice)
 - **MANAGE LOCATIONS** across 5 floors (Warehouses, Classrooms, Offices)
 - **ADD NEW** to inventory
-- **DELETE** or broken equipment
+- **DELETE** broken equipment
 
 Built as part of the Honors IT Team Coding Challenge.
 
@@ -68,12 +68,14 @@ You need **TWO separate terminal windows** running simultaneously.
 ```bash
 cd backend
 npm run dev
+```
 
-### Terminal 2: Start Frontend Dev Server
+### Terminal 1: Start Backend Server
 
 ```bash
 cd frontend
 npm run dev
+```
 
 ## 🗄️ Database Setup
 
