@@ -1,33 +1,22 @@
 {
-  "name": "backend",
+  "name": "honors-inventory-backend",
   "version": "1.0.0",
-  "description": "Honors Inventory Backend API",
-  "main": "dist/server.js",
-  "type": "commonjs",
   "scripts": {
-    "dev": "nodemon src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/server.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "better-sqlite3": "^12.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "pg": "^8.16.3"
+    "pg": "^8.13.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.13",
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.5",
-    "@types/node": "^24.10.1",
-    "@types/pg": "^8.15.6",
-    "nodemon": "^3.1.11",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/cors": "^2.8.17",
+    "typescript": "^5.7.2",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
   }
 }
