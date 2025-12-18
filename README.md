@@ -1,5 +1,9 @@
 # 📦 Honors Inventory System
 
+> **Note:** For the original submission, see the [`sqlite-original`](https://github.com/nnviet06/Honors-Inventory-System/tree/sqlite-original) branch.  
+
+> This `main` branch rebuilds the backend using PostgreSQL for scalability.
+
 A full-stack equipment inventory management system. This application allows staff to track, manage, and transfer IT equipment across different locations within the Honors building. 
 
 ## Project Overview

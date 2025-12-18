@@ -1,5 +1,6 @@
 import styles from './NavBar.module.css';
 
+
 const NavBar = () => {
     // Simple NavBar
     // The Main Page is already on By Items view
