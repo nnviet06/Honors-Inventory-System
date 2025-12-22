@@ -24,7 +24,7 @@ const SearchBar = ({ onRefresh }: { onRefresh: () => void }) => {
             <input
                 className={styles.searchInput}
                 type="text" 
-                placeholder="A future feature I will work on later " //Just putting a placeholder for now
+                placeholder="Search an item ..." 
                 value={query} 
                 onChange={(e) => setQuery(e.target.value)} />    {/* Setting up userState for Search button component*/}
             <button className={styles.searchButton}> Search </button>  
@@ -35,7 +35,7 @@ const SearchBar = ({ onRefresh }: { onRefresh: () => void }) => {
             </button>
             {isFilterOpen && (
                 <div className={styles.filterDropdown}> 
-                     <p>A future feature I will work on later</p>  {/*Just putting a placeholder for now */}
+                     <p>Filter</p> 
                 </div>
             )}
             </div>
