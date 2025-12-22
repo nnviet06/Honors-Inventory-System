@@ -1,3 +1,5 @@
+// Connect to Supabase database
+
 import { createClient } from '@supabase/supabase-js'
 import dotenv from 'dotenv'
 
