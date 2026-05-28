@@ -87,3 +87,5 @@ Supabase handles authentication. The backend is a proxy — it calls `supabase.a
 
 - Use `async/await` — never `.then()` chains
 - Use camelCase for variables, functions, and parameters; PascalCase only for types, interfaces, classes, and React components
+- Use React hooks (functional components) for all new components — no class components
+- Always validate user input with Zod schemas before processing
