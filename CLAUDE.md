@@ -82,3 +82,8 @@ Supabase handles authentication. The backend is a proxy — it calls `supabase.a
 
 ### Pagination & filtering
 `getAllEquipment` accepts `page`, `limit`, `search`, `location`, and `type` query params. Filtering and pagination happen server-side in the Supabase query (range + ilike). The frontend passes these through `equipmentService`.
+
+## Code Style
+
+- Use `async/await` — never `.then()` chains
+- Use camelCase for variables, functions, and parameters; PascalCase only for types, interfaces, classes, and React components
