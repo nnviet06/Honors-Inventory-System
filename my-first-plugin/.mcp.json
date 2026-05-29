@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "plugin-filesystem": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\nnvie\\AppData\\Roaming\\npm\\node_modules\\@modelcontextprotocol\\server-filesystem\\dist\\index.js",
+        "C:\\Users\\nnvie\\Documents"
+      ]
+    }
+  }
+}
